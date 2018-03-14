@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<books xmlns="https://sphotonkhan.com" 
+	   xmlns:menu="https://sphotonkhan.com/menu"
+	   xmlns:pub="https://sphotonkhan.com/pub" 
+	   xmlns:contactus="https://sphotonkhan.com/contactus">
+	<book isbn = "0312863551">
+		<title>The Moon is a Harsh Mistress</title>
+		<author>R.A Heinlein</author>
+		<pub:publisher>Orb</pub:publisher>
+	</book>
+	<book isbn = "0345342868">
+		<title>Fahrenheit 451</title>
+		<author>R. Bradbury</author>
+		<pub:publisher>Del Rey</pub:publisher>
+	</book>
+	<book isbn = "0048231398">
+		<title>The Silmarillion</title>
+		<author>J.R.R. Tolien</author>
+		<pub:publisher>G Allen &amp; Unwin</pub:publisher>
+	</book>
+	<book isbn = "04515294934">
+		<title>1984</title>
+		<author>G Orwell</author>
+		<pub:publisher>Signet</pub:publisher>
+	</book>
+	<book isbn = "031219126X">
+		<title>Frankenstein</title>
+		<author>M. Shelley</author>
+		<pub:publisher>Bedford</pub:publisher>
+	</book>
+</books>
+
+
+			
+			
+			
+			
