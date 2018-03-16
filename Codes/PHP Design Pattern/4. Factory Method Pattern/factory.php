@@ -31,7 +31,7 @@ class fileputcontents implements arraysave{
 		$separate = explode(".", $filename);	
 		switch($separate[1]):
 		case "json":
-		$json = new filputjson();
+		$json = new fileputjson();
 		return $json->create($filename, $array);
 		break; 
 
@@ -121,6 +121,6 @@ $filewrite->create("language.txt", $array);
 
 /*Creating File Using File Put Contents*/
 $fileput = new fileputcontents();
-$filewrite->create("lang.json", $array);
-$filewrite->create("lang.txt", $array);
+$fileput->create("lang.json", $array);
+$fileput->create("lang.txt", $array);
 ?>
