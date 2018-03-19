@@ -1,0 +1,11 @@
+{
+    "autoload": 
+       {
+           "psr-4": 
+              {
+                  "Inventory\\" : "src/",
+                  "Fruits\\" : "src/Fruits/",
+                  "Vegetables\\" : "src/Vegetables/"
+              }
+       }
+}
