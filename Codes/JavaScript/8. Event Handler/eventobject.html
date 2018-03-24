@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Event Object</title>
+		<meta charset = "UTF-8"/>
+		<script>
+			function init(){
+				var words = document.getElementsByTagName("p");
+				for(var i = 0; i < words.length; i++){
+				 	words[i].onclick = eventHandler;
+				}
+			}
+
+			function eventHandler(eventObject){
+				var word = eventObject.target;
+				var id = word.id
+				if(word.hasAttribute("class")){
+					word.removeAttribute("class");
+				}
+				else{
+					word.setAttribute("class", "color");
+				}
+
+				console.log(id);
+			}
+			window.onload = init;
+		</script>
+		<style>
+			.color{
+				color: rgba(120, 120, 110, 0.7);
+			}
+		</style>
+	</head>
+ 	<body>
+ 		<p id = "zero">Zero</p>
+ 		<p id = "one">One</p>
+ 		<p id = "two">Two</p>
+ 	</body>
+</html>

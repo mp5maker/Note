@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Basic String Manipulation </title>
+		<meta charset = "UTF=8">
+<script>
+	var name = "Cupertino Spaniola";
+	/**
+	 * Lower Case
+	 */
+	console.log(name.toLowerCase());
+
+	/**
+	 * Replace
+	 */
+	console.log(name.replace("Span", "Ran"));
+	/**
+	 * Slice
+	 */
+	console.log(name.slice(4, 6));
+
+	/**
+	 * Match
+	 */
+	var name2 = "pan.peteroto";
+	if(name2.match(/oto/gi)){
+		console.log("Found it!");
+	}
+	else{
+		console.log("Where is he?");
+	}
+
+	/**
+	 * Test
+	 */
+	var email = "peter.pan@gmail.com";
+	var regex = /[A-Za-z._]n?@[A-Za-z]n?.[a-z]n?[a-z]n?[a-z]n?/;
+	if(regex.test(email)){
+		console.log("Valid Email Address");
+	}
+	else{
+		console.log("Invalid Email Address");
+	}
+	
+</script>
+	</head>
+	<body>
+	<body>
+</html>

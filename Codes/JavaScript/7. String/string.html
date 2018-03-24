@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Basic String Manipulation </title>
+		<meta charset = "UTF-8">
+		<script>
+			function init(){
+				/**
+				 * Use Get Element By ID (Always to get value)
+				 */
+				var content = document.getElementById("patrick");
+				/**
+				 * Use Text text content to retrieve the value
+				 */
+				var content = content.textContent;
+				/**
+				 * Gives the length of the string
+				 */
+				var len = content.length;
+				/**
+				 * Removes the white space
+				 */
+				var trimmed_content = content.trim();
+				/**
+				 * Upper Case All the string
+				 */
+				var upper_content = trimmed_content.toUpperCase();
+				console.log(content + ", length: " + len);
+				console.log("Trimmed Content: " + trimmed_content + ",  Upper Content: " + upper_content);
+
+				/**
+				 * Look for certain character
+				 */
+				for(var i = 0; i < len;  i++){
+					if(content.charAt(i) == "S"){
+						console.log("S is for Superstar");
+					}
+				}			
+				/**
+				 * In which index does the star is found
+				 */
+				console.log(content.indexOf("Star"));
+
+				/**
+				 * Gives the string at a given range
+				 */
+				var data = document.getElementById("data");
+				data = data.textContent;
+				var val = data.substring(6,9);
+				console.log(val);				
+
+				/**
+				 * Split the string
+				 */
+				data = data.split("|");
+				console.log(data);
+
+				combine = data.join(",")
+				console.log(combine); 
+			}
+			window.onload = init;
+		</script>
+	</head>
+	<body>
+		<h1 id = "patrick"> Patrick Star </h1>
+		<p id = "data">MySQL|PHP|JavaScript|HTML</p>
+	</body>
+</html>

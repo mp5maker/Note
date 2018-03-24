@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Event Handler</title>
+		<meta charset = "UTF-8"/>
+		<script>
+			function init(){
+				var event = document.getElementById("handler");
+				event.onclick = handleEventHandler; 
+				var event_form = document.getElementById("submit");
+				event_form.onclick = handleEventForm;
+			}
+
+			function handleEventHandler(){
+				var handler = document.getElementById("handler");
+				handler.innerHTML = "Fire";
+			}
+
+			function handleEventForm(){
+				var fullname = document.getElementById("fullname");
+				var value = fullname.value;
+				console.log(value);
+			}
+			window.onload = init;
+		</script>
+	</head>
+	<body>
+		<h1 id = "handler">Event Handler</h1>
+		   <input type = "text" name = "text" id = "fullname"/><br/>
+		   <button id = "submit">Confirm</button><br/><br/>
+	</body>
+</html>

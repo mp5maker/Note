@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Handle Key Press</title>
+		<meta charset = "UTF-8">
+		<script>
+			function init(){
+				var element = document.getElementById("clickme");
+				element.onkeypress = handleevent;
+			}
+
+			function handleevent(){
+				element = document.getElementById("fire");
+				element.innerHTML = "Shoot";
+			}
+
+			window.onload = init;
+		</script>
+	</head>
+	<body>
+		<input type = "submit" id = "clickme" name = "submit"/>
+		<h1 id = "fire">Fire</h1> 		
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tag Name</title>
+		<meta charset = "UTF-8">
+	</head>
+	<script>
+		function init(){
+			var superheroes = document.getElementsByTagName("p");
+			for(var i = 0; i < superheroes.length; i++){
+				superheroes[i].onclick = eventHandler;
+			} 
+		}
+
+		function eventHandler(){
+			var text = document.getElementById("fire");
+			text.innerHTML = "Boom!";
+		}
+		window.onload = init;
+	</script>
+	<body>
+		<h1 id = "fire"></h1>
+		<p> Superman </p>
+		<p> Batman </p> 
+		<p> Spiderman </p>
+	</body>
+</html>

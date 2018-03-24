@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Event Soup </title>
+		<meta charset = "UTF-8">
+		<script>
+			function init(){
+				var boom = document.getElementById("boom");
+				/**
+				 * Click
+				 */
+				boom.onclick = clickEventHandler;
+				/**
+				 * Mouse Move
+				 */
+				// boom.onmousemove = moveEventHandler;
+				/**
+				 * Mouse Over
+				 */
+				boom.onmouseover = overEventHandler;
+
+			}
+
+			function clickEventHandler(obj){
+				var click = obj.target;
+				click.setAttribute("class", "click");
+				console.log(click.id);
+			}
+
+			function moveEventHandler(obj){
+				var move = obj.target;
+				move.setAttribute("class", "move");
+			}
+
+			function overEventHandler(obj){
+				var over = obj.target;
+				over.setAttribute("class", "over");
+				console.log(over.id);
+			}
+			/**
+			 * Load
+			 */
+			window.onload = init;
+		</script>
+		<style>
+			.click{
+				color: rgba(255, 0, 0, 0.5);
+			}
+
+			.move{
+				color: rgba(0, 255, 0, 0.5);
+			}
+
+			.over{
+				color: rgba(0, 0, 255, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<p id = "boom"> Just Click </p>
+	</body>
+</html>

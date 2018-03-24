@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Local Time </title>
+		<meta charset = "UTF-8">
+		<script>
+			    function init(){
+					setInterval(update,1000);
+			    }
+
+			    function update(){
+			    	var showtime = document.getElementById("date");
+			    	var date = new Date();
+			    	var localTime = date.toLocaleTimeString();
+					showtime.innerHTML = localTime;
+			    }
+
+			    window.onload = init;
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<p id = "date"><date>Show time</date></p>
+	</body>
+</html>
