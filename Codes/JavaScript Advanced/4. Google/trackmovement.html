@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Tracking Movement </title>
+		<meta charset = "UTF-8"/>
+		<script src = "trackmovement.js"></script>
+		<script 
+		   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3sDQtedEfmXmqSmxL-3Fay7RM5NHWfPw"
+    	async defer>
+    	</script>
+		<style>
+			#map{height: 50%;}
+      		html, body {height: 100%;margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type = "button" id = "watch" value = "Watch me">
+			<input type = "button" id = "clearWatch" value = "Clear Watch">
+		</form>
+		<div id = "location"></div>
+		<div id = "map"></div>
+	</body>
+</html>
+
