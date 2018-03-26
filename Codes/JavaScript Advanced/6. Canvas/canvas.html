@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Canvas </title>
+		<meta charset = "UTF-8"/>
+		<script src = "canvas.js"></script>
+		<style>
+			#drawing{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id = "drawing" width = "600" height = "200"></canvas>
+		<form>
+			<label for = "bgd_color">Background Color:</label>
+			<select id = "bgd_color">
+				<option value = "white" selected = "selected">White</option>
+				<option value = "black">Black</option>
+			</select>&nbsp;
+		
+			<label for = "text_color"> Text Color:</label>
+			<select id = "text_color">
+				<option value = "white">White</option>
+				<option value = "black" selected = "selected">Black</option>
+			</select>&nbsp; 
+		
+			<label for = "shape"> Shape:</label>
+			<select id = "shape">
+				<option value = "square" selected = "selected">Square</option>
+				<option value = "circle">Circle</option>
+			</select><br/><br/>
+
+			<label for = "tweet">Tweet</label><br/>
+			<input type = "text" id = "tweet"/><br/><br/>
+
+			<input type = "button" id = "preview" value = "Preview"/>
+		</form>
+	</body>
+</html>
+
