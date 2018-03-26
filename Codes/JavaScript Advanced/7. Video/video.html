@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Video</title>
+		<meta charset = "UTF-8"/>
+		<script src = "video.js"></script>
+	</head>
+	<body>
+		<video width = "240" height = "180" poster = "icon.ico" id = "video"></video>
+		<canvas id = "buffer" width = "240" width = "180"></canvas>
+	    <canvas id = "display" width = "240" width = "180"></canvas>
+		
+		<div id = "controls">
+			<form>
+				<input type = "button" id = "play" 
+				       class = "controls" value = "Play"/>&nbsp;
+				<input type = "button" id = "pause" 
+					   class = "controls" value = "Pause"/>&nbsp;
+				<input type = "button" id = "loop" 
+					   class = "controls" value = "Loop"/>&nbsp;
+				<input type = "button" id = "mute" 
+					   class = "controls" value = "Mute"/>
+			</form>
+		</div><br/><br/>
+
+		<div id = "effects">
+			<form>
+				<input type = "button" id = "normal" 
+					   class = "effects" value = "Normal"/>&nbsp;
+				<input type = "button" id = "noir" 
+				       class = "effects" value = "Noir"/>&nbsp;
+				<input type = "button" id = "western" 
+				       class = "effects" value = "Western"/>&nbsp;
+				<input type = "button" id = "scifi" 
+				       class = "effects" value = "Sci-Fi"/>&nbsp;
+				<input type = "button" id = "cartoon" 
+				       class = "effects" value = "Cartoon"/>&nbsp;
+			</form>
+		</div><br/><br/>
+
+		<div id = "videoSelection">
+			<form>
+			<input type = "button" id = "video1" 
+					   class = "videoSelection" value = "Video 1"/>&nbsp;
+			<input type = "button" id = "video2" 
+					   class = "videoSelection" value = "Video 2"/>&nbsp;
+			</form>
+		</div>
+	</body>
+</html>
