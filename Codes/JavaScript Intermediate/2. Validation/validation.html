@@ -4,9 +4,28 @@
 		<title> Validation </title>
 		<meta charset = "UTF-8"/>
 		<script src = "validation.js"></script>
+		<style>
+			#passtooltip{
+				display: none;
+			}
+			#password-container:hover > #passtooltip{
+				display: inline-block;
+				color: rgba(0, 0, 255, 0.5);
+			}
+
+			#display{
+				width: 2%;
+				height: 2%;
+				display: inline-block;
+			}
+
+			.con{
+				width: 2%;
+				height: 2%;
+				display: none;
+			}
+		</style>
 	</head>
-	<style>
-	</style>
 	<body>
 		<form>
 			<label for = "username"> Username </label><br/>
@@ -15,24 +34,28 @@
 			<span id = "usernameCheck"></span>
 			<br/><br/>
 
-			<label for = "firstname"> First Name </label><br/>
-			<input type = "text" id = "firstname"/><br/><br/>
+			<div id = "password-container">
+				<label for = "password"> Password </label><br/>
+				<input type = "password" id = "password"/>
+				<span id = "passtooltip">Use 6 characters minimum</span><br/><br/>
+			</div>
 
-			<label for = "lastname"> Last Name </label><br/>
-			<input type = "text" id = "lastname"/><br/><br/>
-
-			<label for = "email"> Email </label><br/>
-			<input type = "text" id = "email"/><br/><br/>
-
-			<label for = "genre"> Genre </label><br/>
-			<select id = "genre">
-				<option id = "action">Action</option>
-			</select><br/><br/>
-
-			<label for = "movie"> Movie </label><br/>
-			<input type = "text" id = "movie"/><br/><br/>
+			<label for = "password2"> Retype Password </label><br/>
+			<input type = "password" id = "password2"/>
+			<img id = "passwordImage" width = "1%" height = "1%"/>
+			<span id = "passwordCheck"></span>
+			<br/><br/>
 
 			<input type = "button" id = "register" value = "Register">
-		</form>
+			<img id = "submitImage" width = "1%" height = "1%"/>
+			<span id = "submitCheck"></span>
+		</form><br/><br/>
+
+		<div id = "image-container">
+			<img class = "con" src = "images/harddrive.ico" alt = "harddrive"/>
+			<img class = "con" src = "images/desktop.ico" alt = "desktop"/>
+			<img class = "con" src = "images/trash.ico" alt = "trash"/>
+			<img class = "con" src = "images/folder.ico" alt = "folder"/>
+		</div>
 	</body>
 </html>
