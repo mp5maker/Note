@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> jQuery UI</title>
+		<meta charset = "UTF-8"/>
+		<script src = "required/external/jquery/jquery.js"></script>
+		<link rel = "stylesheet" href = "required/jquery-ui.css"/>
+		<script src = "required/jquery-ui.js"></script>
+		<script src = "ui.js"></script>
+	</head>
+	<body>
+		<form id = "myForm">
+			<label for = "datepicker"> Date </label><br/>
+			<input type = "text" name = "datepicker" id = "datepicker"/><br/><br/>
+
+			<div id  = "radio">
+				<label for = "gender"> Gender </label><br/>
+
+				<input type = "radio" name = "gender" id = "gender1" value = "male">
+				<label for = "gender1"> Male </label>
+				<input type = "radio" name = "gender" id = "gender2" value = "female"> 
+				<label for = "gender2"> Female </label>
+			</div><br/><br/>
+
+			<input type = "text" id = "slider_value" readonly = "readonly"><br/>
+			<div id = "slider"></div><br/><br/>
+
+			<canvas id = "display" height = "100px" width = "100px"></canvas><br/>
+			<input type = "text" id = "display_value" readonly = "readonly"><br/><br/>
+			
+			<div id = "red"></div>
+			<input type = "text" id = "red_value" readonly = "readonly"><br/><br/>
+			
+			<div id = "green"></div>
+			<input type = "text" id = "green_value" readonly = "readonly"><br/><br/>
+			
+			<div id = "blue"></div>
+			<input type = "text" id = "blue_value" readonly = "readonly"><br/><br/>
+
+			<input type = "submit" name = "submit" value = "Confirm"/>
+		</form>
+		<style>
+			#myForm{
+				width: 15%;
+				text-align: left;
+			}
+		</style>
+	</body>
+</html>
