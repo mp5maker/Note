@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>feOffset</title>
+		<meta charset = "UTF-8"/>
+	</head>
+	<body>
+		<svg>
+		  <defs>
+		    <filter id="f1" x="0" y="0">
+		      <feOffset in="SourceGraphic" result = "offOut" dx = "10" dy = "10"/>
+		      <feBlend in = "SourceGraphic"/>
+		    </filter>
+		  </defs>
+		  <rect id = "rect1" width="90" height="90"/>
+		</svg>
+	</body>
+	<style>
+	  svg{
+	  	width: 200px;
+	  	height: 200px;
+	  }
+
+	#rect1{
+	   stroke: green;	  	
+	   stroke-width: 4;
+	   fill: yellow;
+	   filter: url(#f1);
+	  }
+	</style>
+</html>

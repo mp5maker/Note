@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Linear Gradient </title>
+		<meta charset = UTF-8/>
+	</head>
+	<body>
+		<svg>
+		  <defs>
+		    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+		      <stop offset="0%" class = "off1"/>
+		      <stop offset="100%" class = "off2"/>
+		    </linearGradient>
+		  </defs>
+		  <rect  id = "rect1" width="100" height="100"/>
+		</svg>
+		<svg>
+		  <defs>
+		    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+		      <stop offset="0%" class = "off1"/>
+		      <stop offset="100%" class = "off2"/>
+		    </linearGradient>
+		  </defs>
+		  <rect id = "rect2" width="100" height="100"/>
+		  <text x = "35" y = "50"> Bro! </text>
+		</svg>
+		<style>
+			svg{
+				width: 100px;
+				height: 100px;
+			}
+			#rect1{
+				fill: url(#grad1);
+			}
+			#rect2{
+				fill: url(#grad2);
+			}
+			.off1{
+				stop-color:rgb(255,255,0);
+				stop-opacity:1;
+			}
+			.off2{
+				stop-color:rgb(255,0,0);
+				stop-opacity:1;
+			}
+			text{
+				fill: white;
+			}
+		</style>
+	</body>
+</html>

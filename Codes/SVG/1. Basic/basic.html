@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scalar Vector Graphics</title>
+		<meta charset = "UTF-8">
+	</head>
+	<body>
+		<svg class = "art">
+			<circle id = "circle" cx = "50" cy = "50" r = "40"/>
+		</svg>
+		<svg class = "art">
+			<rect id = "rectangle" x = "0" y = "0" width = "100" height = "100"/>
+		</svg>
+		
+		<svg class = "art">
+			<rect id = "rectangle2" x = "0" y = "0" rx = "10" ry ="10" width = "100" height = "100"/>
+		</svg>
+		
+		<svg class = "art">
+			<ellipse id = "ellipse" cx = "50" cy = "50" rx = "40" ry = "20"/>
+		</svg>
+		
+		<svg class = "art">
+			<ellipse id = "ellipse1" cx = "50" cy = "50" rx = "50" ry = "20"/>
+			<ellipse id = "ellipse2" cx = "50" cy = "40" rx = "40" ry = "15" />
+			<ellipse id = "ellipse3" cx = "50" cy = "30" rx = "30" ry = "10"/>
+		</svg>
+	<style>
+		.art{
+			width: 100px;
+			height: 100px;
+		}
+
+		#circle{
+			stroke: green;
+			stroke-width: 4;
+			fill: yellow;
+		}
+
+		#rectangle{
+			fill: rgba(0, 123, 123, 0.8);
+			stroke: maroon;
+			stroke-width: 4;
+			fill-opacity: 0.1;
+			stroke-opacity: 0.5;
+		}
+
+		#rectangle2{
+			fill: rgba(0, 123, 123, 0.8);
+			stroke: maroon;
+			stroke-width: 4;
+			opacity: 0.5;
+		}
+
+		#ellipse{
+			stroke: green;
+			stroke-width: 4;
+			fill: yellow;
+		}
+		
+		#ellipse1{
+			fill: purple;
+		}
+	    
+	    #ellipse2{
+			fill: lime;
+		}
+		
+		#ellipse3{
+			fill: blue;
+		}
+	</style>
+	</body>
+</html>
+
+  

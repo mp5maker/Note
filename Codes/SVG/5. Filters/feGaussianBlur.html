@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>feGaussianBlur</title>
+		<meta charset = "UTF-8"/>
+	</head>
+	<body>
+		<svg>
+		  <defs>
+		    <filter id="f1" x="0" y="0">
+		      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+		    </filter>
+		  </defs>
+		  <rect id = "rect" width="90" height="90"/>
+		</svg>
+	</body>
+	<style>
+	  svg{
+	  	width: 100px;
+	  	height: 100px;
+	  }
+
+	  #rect{
+	   stroke: green;	  	
+	   stroke-width: 4;
+	   fill: yellow;
+	   filter: url(#f1);
+	  }
+	</style>
+</html>

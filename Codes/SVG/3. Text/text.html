@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text</title>
+		<meta charset = "UTF-8"/>
+	</head>
+	<body>
+		<svg>
+			<text class = "text" x = "50" y = "50">
+				Several Lines:
+				<tspan x = "50" y = "70"> First Line</tspan>
+				<tspan x = "50" y = "90"> Second Line</tspan>
+			</text>	
+		</svg>
+		<svg xmlns:xlink="http://sphotonkhan.com">
+			<a xlink:href = "http://sphotonkhan.com" target="_blank">
+				<text class = "text" x = "50" y = "50">
+					Photon 
+				</text>
+			</a>
+		</svg>
+	</body>
+	<style>
+		svg{
+			width: 200px;
+			height: 200px;
+		}
+
+		.text{
+			fill: rgba(0, 255, 0, 0.6);
+			stroke: rgba(0, 0, 255, 0.3);
+			stroke-width: 2;
+			transform: rotate(20deg);
+		    /*transform: skewY(20deg);*/
+		    /*transform: scaleY(1.5);*/
+		}
+
+	</style>
+</html>
+
+

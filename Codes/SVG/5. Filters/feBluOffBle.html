@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Offset Blend Blur</title>
+		<meta charset = "UTF-8"/>
+	</head>
+	<body>
+		<svg>
+		  <defs>
+		    <filter id="f1" x="0" y="0">
+		      <feOffset in="SourceGraphic" result = "offOut" dx = "10" dy = "10"/>
+		      <feGaussianBlur in = "offOut" result = "OffBlur" stdDeviation = "15"/>
+		      <feBlend in = "SourceGraphic" in2 = "OffBlur" mode = "normal"/>
+		    </filter>
+		  </defs>
+		  <rect id = "rect1" width="90" height="90"/>
+		</svg>
+	  
+	  <svg>
+		  <defs>
+		    <filter id="f2" x="0" y="0">
+		      <feOffset in="SourceAlpha" result = "offOut" dx = "10" dy = "10"/>
+		      <feGaussianBlur in = "offOut" result = "OffBlur" stdDeviation = "15"/>
+		      <feBlend in = "SourceGraphic" in2 = "OffBlur" mode = "normal"/>
+		    </filter>
+		  </defs>
+		  <rect id = "rect2" width="90" height="90"/>
+		</svg>
+		
+		<svg>
+		  <defs>
+		    <filter id="f3" x="0" y="0">
+		      <feOffset in="SourceAlpha" result = "offOut" dx = "10" dy = "10"/>
+			  <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+		      values="0.5 0   0   0   0 
+		              0   0   0   0   0 
+		              0   0   0   0   0  
+		              0   0   0   0.6 0" />
+		      <feGaussianBlur in = "matrixOut" result = "OffBlur" stdDeviation = "15"/>
+		      <feBlend in = "SourceGraphic" in2 = "OffBlur" mode = "normal"/>
+		    </filter>
+		  </defs>
+		  <rect id = "rect3" width="90" height="90"/>
+		</svg>
+	</body>
+	<style>
+	  svg{
+	  	width: 200px;
+	  	height: 200px;
+	  }
+
+	#rect1{
+	   stroke: green;	  	
+	   stroke-width: 4;
+	   fill: yellow;
+	   filter: url(#f1);
+	  }
+	
+	#rect2{
+	   stroke: green;	  	
+	   stroke-width: 4;
+	   fill: yellow;
+	   filter: url(#f2);
+	  }
+	
+	#rect3{
+	   stroke: green;	  	
+	   stroke-width: 4;
+	   fill: yellow;
+	   filter: url(#f3);
+	  }
+	</style>
+</html>

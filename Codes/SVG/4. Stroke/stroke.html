@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stroke</title>
+		<meta charset = "UTF-8"/>
+	</head>
+	<body>
+		<svg>
+			<line id = "line1" x1 = "0" y1 = "20" x2 = "100" y2 = "20"/> 
+			<line id = "line2" x1 = "0" y1 = "40" x2 = "100" y2 = "40"/> 
+			<line id = "line3" x1 = "0" y1 = "60" x2 = "100" y2 = "60"/> 
+			<line id = "line4" x1 = "0" y1 = "80" x2 = "100" y2 = "80"/> 
+		</svg>
+
+		<style>
+			svg{
+				width: 100px;
+				height: 100px;
+			}
+
+			#line1{
+				stroke: black;
+				stroke-width: 4;
+				stroke-linecap: butt;
+				stroke-dasharray: 5,5;
+			}
+			
+			#line2{
+				stroke: black;
+				stroke-width: 4;
+				stroke-linecap: round;
+				stroke-dasharray: 10,10;
+			}
+			
+			#line3{
+				stroke: black;
+				stroke-width: 4;
+				stroke-linecap: square;
+				stroke-dasharray: 25,5,15,5,10,5;
+			}
+			
+			#line4{
+				stroke: black;
+				stroke-width: 4;
+				stroke-linecap: butt;
+			}
+		</style>
+	</body>
+</html>
+
+
