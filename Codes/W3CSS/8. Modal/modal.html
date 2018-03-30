@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modal </title>
+		<meta charset = "UTF-8"/>
+		<link rel = "stylesheet" href = "../Required/w3.css"/>
+	</head>
+	<body>
+		<button id = "firstButton"class = "w3-button"> Log in </button>				
+		<div class = "w3-modal" id = "modal">
+			<div class = "w3-modal-content w3-padding" style = "width:20%;">
+				<form class = "w3-container w3-animate-opacity">
+					<span class = "w3-button w3-display-topright" id ="secondButton">&times;</span>
+					<label for = "username" class = "w3-text=green">Username</label>
+					<input type = "text" class = "w3-border w3-input"/>
+					<label for = "password" class = "w3-text=green">Password</label>
+					<input type = "password" class = "w3-border w3-input"/><br/>
+					<button class = "w3-button w3-border w3-green"> Confirm </button>
+				</form>
+			</div>
+		</div>
+		<script>
+			function init(){
+				var button = document.getElementById("firstButton");
+				button.onclick = function(){
+					var modal = document.getElementById("modal");
+					modal.style.display = "block";
+				};
+
+				var button2 = document.getElementById("secondButton");
+				button2.onclick = function(){
+					var modal = document.getElementById("modal");
+					modal.style.display = "none";
+				}
+			}
+			window.onload = init;
+		</script>
+	</body>
+</html>

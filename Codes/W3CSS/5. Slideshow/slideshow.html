@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> SlideShow</title>
+		<meta charset = "UTF-8"/>
+		<link rel = "stylesheet" href = "../Required/w3.css"/>
+	</head>
+	<body>
+		<div class = "w3-content w3-display-container" style = "width:100px;">
+			<img class = "mySlides" src = "images/desktop.ico" style = "width:100%">
+			<img class = "mySlides" src = "images/trash.ico" style = "width:100%">
+			<img class = "mySlides" src = "images/hdd.ico" style = "width:100%">
+			<img class = "mySlides" src = "images/folder.ico" style = "width:100%">
+		</div>
+	</body>
+	<script>
+		position = 0;
+
+		function init(){
+			var images = document.getElementsByClassName("mySlides");
+			for(var i = 0; i < images.length; i++){
+				images[i].style.display = "none";
+			}
+			
+			position++;
+			if(position > images.length){position = 1;}
+			images[position-1].style.display = "block";
+
+			setTimeout(init, 3000);
+		}
+		window.onload = init;
+	</script>
+</html>
