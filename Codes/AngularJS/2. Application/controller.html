@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Angular JS Controller</title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp">
+			<div ng-controller = "myCtrl">
+				<label for = "first"> First Name</label><br/>
+				<input type = "text" ng-model = "first"/><br/><br/>
+
+				<label for = "second"> Second Name </label><br/>
+				<input type = "text" ng-model = "second"/><br/><br/>
+
+				<p> Full Name: <span ng-bind = "first + ' ' + second"></span></p>
+			</div>
+		</div>
+		<script>
+			var myApp = angular.module("myApp", []);
+			myApp.controller("myCtrl", function($scope){
+				$scope.first = "";
+				$scope.second = "";
+			});
+		</script>
+	</body>
+</html>

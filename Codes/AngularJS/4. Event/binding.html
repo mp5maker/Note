@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Binding </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			 <div ng-click = "changeName()">{{firstname}}</div>
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.controller("myCtrl", function($scope){
+					$scope.firstname = "John";
+					$scope.changeName = function(){
+						$scope.firstname = "Bob";
+					}
+			});
+		</script>
+	</body>
+</html>

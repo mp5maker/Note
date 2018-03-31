@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Loop </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			<ul>
+				<li ng-repeat = "x in names">
+					Name: {{x.name}}; Age: {{x.age}}
+				</li>
+			</ul>
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.controller("myCtrl", function($scope){
+				$scope.names = [
+					{name: 'Sam', age: 15},
+					{name: 'Bob', age: 28},
+					{name: 'Mary', age: 41}
+				];
+			});
+		</script>
+	</body>
+</html>

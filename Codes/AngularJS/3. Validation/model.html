@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> AngularJS Model </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<form ng-app = "" name = "myForm">
+			<label for =  "emailaddress">Email</label>
+			<input type = "email" name = "emailaddress" ng-model = "text">
+			<p><span ng-show = "myForm.emailaddress.$error.email"> Not a Valid Address </span></p>
+			<h1> Status</h1>
+			Valid Status: {{myForm.emailaddress.$valid}}<br/>		
+			Dirty Status: {{myForm.emailaddress.$dirty}}<br/>		
+			Touch Status: {{myForm.emailaddress.$touched}}<br/>		
+		</form>
+		<style>
+			input.ng-invalid {
+				background-color: red;
+			}
+		</style>
+	</body>
+</html>

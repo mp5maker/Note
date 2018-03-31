@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Scope </title>
+		<meta charset = "UTF-8">
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp">
+			<p>First Name: {{name}} </p>
+			<div ng-controller = "myCtrl">
+				<p>Second Name: {{name}}</p>
+			</div>
+			<p>Third Name: {{name}} </p>
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.run(function($rootScope){
+				$rootScope.name = "Bob Marley";
+			});
+
+			app.controller("myCtrl", function($scope){
+				$scope.name = "Jimi Marley";
+			});
+		</script>
+	</body>
+</html>

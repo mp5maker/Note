@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Angular Directive</title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" boom-shakalaka></div>
+		<script>
+			var myApp = angular.module("myApp",[]);
+			myApp.directive("boomShakalaka", function(){
+				return {
+					template: "I am the boom boom man!" 
+				};
+			});
+		</script>
+	</body>
+</html>

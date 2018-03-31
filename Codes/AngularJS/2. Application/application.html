@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Angular JS Basics</title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-init="cost=5;quantity=5;myColor='orange'">
+			<div ng-controller = "myCtrl">
+				<label for = "firstname"> First Name </label><br/>
+				<input type = "text" ng-model = "firstname"/><br/><br/>
+				<label for = "lastname"> Last Name </label><br/>
+				<input type = "text" ng-model = "lastname"/><br/><br/>
+				<p style = "color:{{myColor}}">Full Name: {{firstname}} {{lastname}}</p>
+			</div>
+			<div>
+				<p> Quantity to be Sold: {{cost * quantity}}</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl",function($scope){
+			$scope.firstname = "";
+			$scope.lastname = "";
+		});
+	</script>
+</html>

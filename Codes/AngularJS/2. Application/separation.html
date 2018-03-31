@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Separation </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			<label for = "name"> Name </label><br/>
+			<input type = "text" ng-model = "name"><br/><br/>
+			<p>I know what you did there! Mr. <span ng-bind = "name"></span>!<p>
+		</div>
+	</body>
+	<script src = "myApp.js"></script>
+	<script src = "myCtrl.js"></script>
+</html>
