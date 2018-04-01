@@ -1,0 +1,37 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<title></title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<form ng-app = "myApp" name = "myForm">
+			<label for = "regex"> Phone Number </label>
+			<input ng-model = "regex" name = "regex" required my-directive/>
+			<p> Valid: {{myForm.regex.$valid}} </p>
+			<p ng-show = "myForm.regex.$invalid">Pattern do no match [XXX-XXX-XXXX]</p>
+		</form>
+		<script>
+			var app = angular.module("myApp", []);
+			app.directive("myDirective", function(){
+				return {
+					require: "ngModel",
+					link: function(scope, element, attr, mCtrl){
+						function myValidation(value){
+							var pattern = /^\d{3}-\d{3}-\d{4}$/;	
+							if(pattern.test(value)){
+								console.log(pattern.test(value));
+								mCtrl.$setValidity('charE', true); 
+							}else{
+								mCtrl.$setValidity('charE', false);
+							}
+							return value;
+						}
+						mCtrl.$parsers.push(myValidation);
+					}
+				};
+			});
+		</script>
+	</body>
+</html>

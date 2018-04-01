@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Routing </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+		<script src = "../Required/angular-route.js"></script>
+	</head>
+	<body ng-app = "myApp">
+		<p><a href="#/!">Main</a></p>
+		<a href="#!london">City 1</a>
+		<a href="#!paris">City 2</a>
+		<div ng-view></div>
+	</body>
+	<script>
+		var app = angular.module("myApp", ["ngRoute"]);
+		app.config(function($routeProvider) {
+			$routeProvider
+			    .when("/", {
+			        templateUrl : "main.html"
+			    })
+			    .when("/london", {
+			        templateUrl : "london.html",
+			        controller : "londonCtrl"
+			    })
+			    .when("/paris", {
+			        templateUrl : "paris.html",
+			        controller : "parisCtrl"
+			    });
+			});
+
+			app.controller("londonCtrl", function ($scope) {
+			    $scope.msg = "I love London";
+			});
+
+			app.controller("parisCtrl", function ($scope) {
+			    $scope.msg = "I love Paris";
+			});
+	</script>
+</html>

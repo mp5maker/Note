@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Global API </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+		<script src = "../Required/angular-animate.js"></script>
+	</head>
+	<body>
+		<diV ng-app = "myApp" ng-controller = "myCtrl">
+			<button ng-click = "toggle()">Animation</button>
+			<div ng-show = "check"></div>
+		</diV>
+	</body>
+	<script>
+		var app = angular.module("myApp",["ngAnimate"]);
+		app.controller("myCtrl", function($scope){
+			$scope.check = false;
+			$scope.toggle = function(){
+				if($scope.check){
+					$scope.check = false;
+				}else{
+					$scope.check = true;
+				}
+			};
+		});
+	</script>
+	<style>
+		@keyframes myChange{
+			from{
+				height: 100px;
+			}to{
+				height: 0px;
+			}
+		}
+		.ng-hide{
+			animation: 0.5s myChange;
+			height: 0px;
+		}
+
+		div > div{
+			height: 100px;
+			background-color: lightblue;
+			transition: all linear 0.5s;
+		}
+	</style>
+</html>

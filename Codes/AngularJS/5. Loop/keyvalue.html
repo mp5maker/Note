@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Options </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			<select ng-model = "selectCar" ng-options = "y.model for (x,y) in cars"></select>
+			<p> Car Model: {{selectCar.model}}</p>
+			<p> Color: {{selectCar.color}}</p>
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.controller("myCtrl", function($scope){
+				 $scope.cars = [
+				        {model : "Ford Mustang", color : "red"},
+				        {model : "Fiat 500", color : "white"},
+				        {model : "Volvo XC90", color : "black"}
+				    ];
+			});
+		</script>
+	</body>
+</html>

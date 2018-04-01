@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Interval </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			<p ng-bind = "todaydate"></p> 
+		</div>
+	</body>
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope, $interval){
+			$interval(function(){
+				$scope.todaydate = new Date().toLocaleTimeString();
+			}, 1000);
+		});
+	</script>
+</html>

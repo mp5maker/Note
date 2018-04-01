@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Angular JS Basics</title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<form ng-app = "myApp" ng-controller = "myCtrl" name = "myForm">
+			<label for = "fullname">Name</label><br/>
+			<input type = "text" ng-model = "fullname" name = "fullname" required/><br/>
+			     You entered: {{fullname}}<br/>
+				 Empty: {{myForm.fullname.$valid}}<br/><br/>
+
+			<label for = "myemail">Email</label><br/>
+			<input type = "email" name = "myemail" ng-model = "myemail"/><br/>
+				 You entered: {{myemail}}<br/>
+				 Valid: {{myForm.myemail.$valid}}<br/><br/>
+
+			<label for = "hobbies">Hobbies</label><br/>
+			<input type = "checkbox" ng-model = "guitar"/> 
+			<label for = "guitar">Guitar</label>
+			<input type = "checkbox" ng-model = "reading"/> 
+			<label for = "reading">Reading</label>
+			<input type = "checkbox" ng-model = "gaming"/> 
+			<label for = "gaming">Gaming</label><br/>
+				You chose: {{guitar}}<br/>
+				You chose: {{reading}}<br/>
+				You chose: {{gaming}}<br/><br/>
+
+			<label for = "gender"> Gender </label><br/>
+			<input type = "radio" ng-model = "gender" value = "male"/>
+			<label for = "male"> Male </label>
+			<input type = "radio" ng-model = "gender" value = "female"/>
+			<label for = "female"> Female </label><br/>
+				You chose: {{gender}}<br/><br/>
+
+			<label for = "cars">Cars</label><br/>
+			<select ng-options = "x.name for x in cars" ng-model = "car"></select><br/>
+				You chose: {{car.name + " " + car.model}}<br/><br/>
+		</form>
+		<script>
+			var app = angular.module("myApp", []);
+			
+			app.controller("myCtrl",function($scope){
+				$scope.fullname = "";
+				$scope.cars = [
+								{name: "Toyota", model: "Corolla"},
+								{name: "Mazda", model: "RX-7"},
+								{name: "Nissan", model: "350Z"}
+				];
+			});
+		</script>
+	</body>
+</html>

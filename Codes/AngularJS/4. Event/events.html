@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Event </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			 <div ng-mouseover = "myColor='red'" ng-mouseleave = "myColor='black'"
+			 	  ng-click = "colorChange()">Over me</div>
+			 <p style = "color: {{myColor}};"> Bro, What is wrong with me!</p>
+			 
+			 <button ng-click = "showGroceries()">Show</button>
+			 <ul ng-show = "condition">
+			 	<li> Milk </li>
+			 	<li> Butter</li>
+			 	<li> Bacon </li>
+			 </ul><br/><br/>
+
+			 <h1 ng-mousemove = "giveCoords($event)"> Check it out </h1>
+			 <p> ClientX: {{x}}; ClientY {{y}};
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.controller("myCtrl", function($scope){
+				$scope.showGroceries = function(){
+					console.log($scope.condition);
+					if($scope.condition == undefined || $scope.condition == null){
+						$scope.condition = false;
+					}else if($scope.condition){
+						$scope.condition = false;
+					}else{
+						$scope.condition = true;
+					}
+				}
+
+				$scope.colorChange = function(){
+					$scope.myColor = "blue";
+				}
+
+				$scope.giveCoords = function(event){
+					$scope.x = event.clientX;
+					$scope.y = event.clientY;
+				}
+			});
+		</script>
+	</body>
+</html>

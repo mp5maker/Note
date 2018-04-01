@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Global API </title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body >
+		<div ng-app = "myApp" ng-controller = "myCtrl">
+			Input: <input type = "text" ng-model = "inputNumber"/><br/>
+			<p>Display: {{inputNumber}}</p>
+			<p>Lower: {{lower}}</p>
+			<p>Upper: {{upper}}</p>
+			<p>String: {{isitstring}}</p>
+			<p>number: {{isitnumber}}</p>
+
+		</div>
+	</body>
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope, $interval){
+			 $scope.inputNumber = "";
+			 $interval(function(){
+			 	$scope.lower 	  = angular.lowercase($scope.inputNumber);
+			 	$scope.upper 	  = angular.uppercase($scope.inputNumber);
+			 	$scope.isitstring = angular.isString($scope.inputNumber);
+			 	$scope.isitnumber = angular.isNumber($scope.inputNumber);
+			 },1000);
+		});
+	</script>
+</html>
+

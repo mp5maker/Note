@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<meta charset = "UTF-8"/>
+		<script src = "../Required/angular.js"></script>
+	</head>
+	<body>
+		<div ng-app = '' ng-init = "mySwitch=true;hour=13">
+			<button ng-disabled = "mySwitch"> Click me! </button><br/>
+			<input type = "checkbox" ng-model = "mySwitch"/><br/>
+			<p ng-bind = "mySwitch"></p>
+
+			<p ng-show = "true"> I can see you!</p>
+			<p ng-show = "false"> I can't see you!</p>
+			<p ng-show = "hour>12"> Expression Show can see you!</p>
+			
+			<p ng-hide = "hour<12"> Expression Hide can see you!</p>
+			<p ng-hide = "hour>12"> Expression Hide can see you!</p>
+		</div>
+	</body>
+</html>
