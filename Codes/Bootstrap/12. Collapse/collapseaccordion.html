@@ -1,0 +1,47 @@
+<html lang = "en">
+	<head>
+		<title>Collapse|Accordion</title>
+		<meta charset = "UTF-8"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+		<link rel = "stylesheet" href = "../Required/bootstrap.min.css"/>
+		<script src = "../Required/jquery.min.js"></script>
+		<script src = "../Required/popper.min.js"></script>
+		<script src = "../Required/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class = "row">
+			<div class = "col">
+				<button type = "button" data-target = "#desc" data-toggle = "collapse">Show</button>
+				<div id = "desc" class = "collapse show">
+					<p>My chicken is your head!</p>
+				</div>
+			</div>
+		</div>
+		 <div  id = "accordion">
+				<div class = "card">
+					<div class = "card-header">
+						<a class = "card-link" data-toggle = "collapse" href = "#collapseOne">
+							Collapse 1
+						</a>
+					</div>
+					<div id = "collapseOne" class = "collapse show" data-parent = "#accordion">
+						<div class = "card-body">
+							Boom Boom!
+						</div>
+					</div>
+				</div>
+				<div class = "card">
+					<div class = "card-header">
+						<a class = "collapsed card-link" data-toggle = "collapse" href = "#collapseTwo">
+							Collapse 2
+						</a>
+					</div>
+					<div id = "collapseTwo" class = "collapse show" data-parent = "#accordion">
+						<div class = "card-body">
+							Vroom Vroom!
+						</div>
+					</div>
+				</div>
+		 </div>
+	</body>
+</html>
