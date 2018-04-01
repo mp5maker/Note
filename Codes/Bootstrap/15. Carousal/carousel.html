@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Carousel</title>
+		<meta charset = "UTF-8"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+		<link rel = "stylesheet" href = "../Required/bootstrap.min.css"/>
+		<script src = "../Required/jquery.min.js"></script>
+		<script src = "../Required/popper.min.js"></script>
+		<script src = "../Required/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="demo" class="carousel slide" data-ride="carousel" style = "width:600px;height:200px">
+		  <!-- Indicators -->
+		  <ul class="carousel-indicators">
+		    <li data-target="#demo" data-slide-to="0" class="active"></li>
+		    <li data-target="#demo" data-slide-to="1"></li>
+		    <li data-target="#demo" data-slide-to="2"></li>
+		  </ul>
+
+		  <!-- The slideshow -->
+		  <div class="carousel-inner">
+		    <div class="carousel-item active card">
+		      <img src="images/horse.jpg" alt="Horse" style = "width:600px;height:200px">
+		      <div class = "corousel-caption">
+		      	<h3>Horse</h3>
+		      	<p>Magnificent</p>
+		      </div>
+		    </div>
+		    <div class="carousel-item card">
+		      <img src="images/car.jpg" alt="Car" style = "width:600px;height:200px">
+		      <div class = "corousel-caption">
+		      	<h3>Car</h3>
+		      	<p>Self-driven</p>
+		      </div>
+		    </div>
+		    <div class="carousel-item card">
+		      <img src="images/punch.jpg" alt="Punch" style = "width:600px;height:200px">
+		      <div class = "corousel-caption">
+		      	<h3>Punch</h3>
+		      	<p>Motivating</p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		  </a>
+		  <a class="carousel-control-next" href="#demo" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		  </a>
+		</div>
+	</body>
+</html>

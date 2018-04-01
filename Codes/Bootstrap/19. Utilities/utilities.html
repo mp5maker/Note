@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Utilities</title>
+		<meta charset = "UTF-8"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+		<link rel = "stylesheet" href = "../Required/bootstrap.min.css"/>
+		<script src = "../Required/jquery.min.js"></script>
+		<script src = "../Required/popper.min.js"></script>
+		<script src = "../Required/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<span class="border">Border</span>
+		<span class="border border-0">Border</span>
+		<span class="border border-top-0">Border</span>
+		<span class="border border-right-0">Border</span>
+		<span class="border border-bottom-0">Border</span>
+		<span class="border border-left-0">Border</span><br/><br/>
+
+		<span class="border border-primary"></span>
+		<span class="border border-secondary"></span>
+		<span class="border border-success"></span>
+		<span class="border border-danger"></span>
+		<span class="border border-warning"></span>
+		<span class="border border-info"></span>
+		<span class="border border-light"></span>
+		<span class="border border-dark"></span>
+		<span class="border border-white"></span><br/><br/>
+
+		<span class="rounded"></span>
+		<span class="rounded-top"></span>
+		<span class="rounded-right"></span>
+		<span class="rounded-bottom"></span>
+		<span class="rounded-left"></span>
+		<span class="rounded-circle"></span>
+		<span class="rounded-0"></span>		
+		
+		<div class="clearfix">
+		  <span class="float-left">Float left</span>
+		  <span class="float-right">Float right</span>
+		</div>
+
+		<div class="float-sm-right">Float right on small screens or wider</div><br>
+		<div class="float-md-right">Float right on medium screens or wider</div><br>
+		<div class="float-lg-right">Float right on large screens or wider</div><br>
+		<div class="float-xl-right">Float right on extra large screens or wider</div><br>
+		<div class="float-none">Float none</div>
+
+		<div class="mx-auto bg-warning" style="width:150px">Centered</div>
+		<div class="w-25 bg-warning">Width 25%</div>
+		<div class="w-50 bg-warning">Width 50%</div>
+		<div class="w-75 bg-warning">Width 75%</div>
+		<div class="w-100 bg-warning">Width 100%</div>
+		<div class="mw-100 bg-warning">Max Width 100%</div><br/><br/>
+
+		<div style="height:200px;background-color:#ddd">
+		  <div class="h-25 bg-warning">Height 25%</div>
+		  <div class="h-50 bg-warning">Height 50%</div>
+		  <div class="h-75 bg-warning">Height 75%</div>
+		  <div class="h-100 bg-warning">Height 100%</div>
+		  <div class="mh-100 bg-warning" style="height:500px">Max Height 100%</div><br/><br/>
+		</div>
+
+		<div class="pt-4 bg-warning">I only have a top padding (1.5rem = 24px)</div>
+		<div class="p-5 bg-success">I have a padding on all sides (3rem = 48px)</div>
+		<div class="m-5 pb-5 bg-info">I have a margin on all sides (3rem = 48px) and a bottom padding (3rem = 48px)</div><br/><br/>
+
+		<span class="align-baseline">baseline</span>
+		<span class="align-top">top</span>
+		<span class="align-middle">middle</span>
+		<span class="align-bottom">bottom</span>
+		<span class="align-text-top">text-top</span>
+		<span class="align-text-bottom">text-bottom</span>
+	</body>
+	<style>
+		 .border {
+		    display: inline-block;
+		    width: 70px;
+		    height: 70px;
+		    margin: 6px;
+		  }
+
+		   span[class^='rounded']{
+		    display: inline-block;
+		    width: 70px;
+		    height: 70px;
+		    margin: 6px;
+		    background-color: #555;
+		  }
+
+		  .clearfix > span[class^=".float"]{
+		    background-color: #555;
+		  }
+
+
+	</style>
+</html>

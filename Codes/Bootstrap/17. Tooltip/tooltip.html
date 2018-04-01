@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Modal</title>
+		<meta charset = "UTF-8"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+		<link rel = "stylesheet" href = "../Required/bootstrap.min.css"/>
+		<script src = "../Required/jquery.min.js"></script>
+		<script src = "../Required/popper.min.js"></script>
+		<script src = "../Required/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a><br/>
+		<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Hover</a><br/>
+		<a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Hover</a><br/>
+		<a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Hover</a><br/>
+
+		<a href="#" title="Header" data-toggle="popover" data-placement="top" 
+		   data-content="Content" data-trigger = "focus">Click</a>
+		<a href="#" title="Header" data-toggle="popover" data-placement="bottom" 
+			data-content="Content" data-trigger = "focus">Click</a>
+		<a href="#" title="Header" data-toggle="popover" data-placement="left" 
+		  data-content="Content" data-trigger = "focus">Click</a>
+		<a href="#" title="Header" data-toggle="popover" data-placement="right" 
+		   data-content="Content" data-trigger = "focus">Click</a>
+		<script>
+			$(document).ready(function(){
+				$("[data-toggle='tooltip']").tooltip();
+			});
+			$(document).ready(function(){
+				$("[data-toggle='popover']").popover();
+			});
+		</script>
+	</body>
+</html>
