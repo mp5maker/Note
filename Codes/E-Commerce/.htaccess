@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteRule ^index/?$ index.php [NC,L]
+RewriteRule ^register/?$ includes/register.php [NC,L]
+RewriteRule ^contact/?$ includes/contact.php [NC,L]
+RewriteRule ^about/?$ includes/about.php [NC,L]
+RewriteRule ^register/?$ includes/register.php [NC,L]
+RewriteRule ^forgot-password/?$ includes/forgot_password.php [NC,L]
+RewriteRule ^change-password/?$ includes/change_password.php [NC,L]
+RewriteRule ^logout/?$ includes/logout.php [NC,L]
+RewriteRule ^login-form/?$ includes/login_form.inc.php [NC,L]

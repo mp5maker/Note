@@ -1,29 +1,33 @@
+<div class = "row page">
+	<div class = "col-10 content my-2">
+		  <?php if(isset($body)) echo $body;?>
+	</div>
 	<div class = "sidebar col-2 d-none d-sm-block">
 		<div class = "my-2">
 			<h4 class = "text-success bg-dark card title"> Manage Your Accounts</h4>
 			<ul class = "list-unstyled card">
 				<li>
-					<a href = "renew.php" class = "nounderline" title = "Renew Your Account">
+					<a href = "renew" class = "nounderline" title = "Renew Your Account">
 						<code class = "text-secondary"> Renew Account </code>
 					</a>	
 				</li>
 				<li>
-					<a href = "change_password.php" class = "nounderline" title = "Change Your Password">
+					<a href = "change-password" class = "nounderline" title = "Change Your Password">
 						<code class = "text-secondary"> Change Password </code>
 					</a>
 				</li>
 				<li>
-					<a href = "favorites.php" class = "nounderline" title = "View Your Favorites">
+					<a href = "favorites" class = "nounderline" title = "View Your Favorites">
 						<code class = "text-secondary"> Favorites </code>
 					</a>
 				</li>
 				<li>
-					<a href = "recommendations.php" class = "nounderline" title = "View Your Recommendations">
+					<a href = "recommendations" class = "nounderline" title = "View Your Recommendations">
 						<code class = "text-secondary"> Recommendations </code>
 					</a>
 				</li>
 				<li>
-					<a href = "logout.php" class = "nounderline" title = "Logout">
+					<a href = "logout" class = "nounderline" title = "Logout">
 						<code class = "text-secondary"> Logout </code>
 					</a>
 				</li>
@@ -47,5 +51,25 @@
 				?>
 			</ul>
 		</div>
+		
+		<?php if(isset($_SESSION['user_admin'])): ?>
+		<div class = "my-2">
+			<h4 class = "text-danger bg-dark card title"> Administration</h4>
+			<ul class = "list-unstyled card">
+				<li>
+					<a href = "add_page.php" class = "nounderline" title = "Add a Page">
+						<code class = "text-secondary"> Add a Page </code>
+					</a>	
+				</li>
+				<li>
+					<a href = "add_pdf.php" class = "nounderline" title = "Add a PDF">
+						<code class = "text-secondary"> Add a PDF </code>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<?php endif; ?>
+		<?php if(!isset($_SESSION['user_id'])){include('login_form.inc.php');} ?>
 	</div>
 </div>
+<?php 

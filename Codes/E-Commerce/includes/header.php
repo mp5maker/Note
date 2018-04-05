@@ -4,17 +4,14 @@
 		<meta charset = "UTF-8"/>
 		<meta name = "viewport" content = "width=device-width,  initial-scale=1"/>
 		<title>
-		 	<?php $title = isset($page_title)? $page_title 
-		 	             : "Knowledge is Power: And It Pays to Know";?>
+		 	<?php $title = isset($page_title)? $page_title : "Knowledge is Power: And It Pays to Know";?>
 		 	<?php echo $title; ?>
 		</title>
-		<?php 
-			echo '<link rel = "stylesheet" href = "/E-Commerce/vendor/bootstrap.min.css" media = "screen"/>';
-			echo '<link rel = "stylesheet" href = "/E-Commerce/CSS/style.css" media = "screen"/>';
-			echo '<script src = "/E-Commerce/vendor/jquery.min.js"></script>';
-			echo '<script src = "/E-Commerce/vendor/popper.min.js"></script>';
-			echo '<script src = "/E-Commerce/vendor/bootstrap.min.js"></script>';
-		?>
+			<link rel = "stylesheet" href = "/E-Commerce/vendor/bootstrap.min.css" media = "screen"/>
+			<link rel = "stylesheet" href = "/E-Commerce/CSS/style.css" media = "screen"/>
+			<script src = "/E-Commerce/vendor/jquery.min.js"></script>
+			<script src = "/E-Commerce/vendor/popper.min.js"></script>
+			<script src = "/E-Commerce/vendor/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class = "row" id = "wrap">
@@ -40,9 +37,9 @@
    				</button>
    				<div class = "collapse navbar-collapse" id = "collapsibleNavbar">
 					<ul class = "navbar-nav">
-					<?php $pages = ["Home" => "index.php", "About" => "about.php", 
-					                "Contact" => "contact.php", "Register" => "register.php"];
-						$this_page = basename($_SERVER['PHP_SELF']); 
+					<?php $pages = ["Home" => "index", "About" => "about", 
+					                "Contact" => "contact", "Register" => "register"];
+						$this_page = basename($_SERVER['PHP_SELF'], ".php"); 
 					    foreach ($pages as $key => $value):
 					    	if($value == $this_page):
 								echo '<li class = "nav-item active">';
