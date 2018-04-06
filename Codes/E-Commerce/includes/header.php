@@ -17,7 +17,7 @@
 		<div class = "row" id = "wrap">
 			<div class = "col header text-center bg-light">
 				<h1>
-					<a href = "index.php" class = "nounderline">
+					<a href = "/E-Commerce/index" class = "nounderline">
 						<code class = "text-info">Knowledge is Power</code>
 					</a>
 				</h1>
@@ -46,7 +46,7 @@
 					    	else:	
 								echo '<li class = "nav-item">';
 					    	endif;
-							echo '	<a href = "'.$value.'" class = "nav-link">';
+							echo '	<a href = "/E-Commerce/'.$value.'" class = "nav-link">';
 							echo 		$key;
 							echo '	</a>';
 							echo '</li>';

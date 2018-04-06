@@ -1,8 +1,8 @@
 <?php
 $live = false;
 $contact_email = "khan.photon@gmail.com";
-define('BASE_URI', $_SERVER['DOCUMENT_ROOT'].'/E-Commerce/includes/pdfs/');
-define('BASE_URL', $_SERVER['DOCUMENT_ROOT'].'/E-Commerce/');
+// define('BASE_URI', $_SERVER['DOCUMENT_ROOT'].'/E-Commerce/includes/pdfs/');
+// define('BASE_URL', $_SERVER['DOCUMENT_ROOT'].'/E-Commerce/');
 define('MYSQL', $_SERVER['DOCUMENT_ROOT'].'/E-Commerce/includes/mysql.inc.php');
 
 session_start();
