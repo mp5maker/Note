@@ -33,8 +33,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['recovery'])):
 				$query = "UPDATE users SET pass = '$pass_hash' WHERE id = '$user_id'";
 				$result = mysqli_query($dbc, $query);
 				if(mysqli_affected_rows($dbc) == 1):
-					$body = "Your password to log into CODE BREAK has been temporarily changed to $p Please log in using that password and this email address.";
-					mail("khan.photon@gmail.com", "Your temporary password", $body, 'From: khan.photon@gmail.com');
+					 $from = "khan.photon@gmail.com";
+			    	 $to = $e;
+			    	 $subject = "Password Recovery: Temporary Password";
+			    	 $message = "Your password to log into CODE BREAK has been temporarily changed to $p Please log in using that password and this email address.";
+			    	 $headers = "From:" . $from;
+				    if(mail($to,$subject,$message, $headers)):
+				        echo "Email sent.";
+				    else: 
+				        echo "Failed to send the email.";
+				    endif; 
 					$recovery_message = true;
 				endif;
 			endif;

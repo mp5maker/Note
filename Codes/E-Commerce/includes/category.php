@@ -29,7 +29,7 @@ if(isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, ['min_rang
 	endif;
 
 	if(isset($_SESSION['user_id']) && isset($_SESSION['user_not_expired'])):
-		$query = "SELECT id, title, description FROM Pages WHERE category_id = '".$_GET['id']."' ORDER BY date_created DESC";
+		$query = "SELECT id, title, description FROM pages WHERE category_id = '".$_GET['id']."' ORDER BY date_created DESC";
 		$result = mysqli_query($dbc, $query);
 		if(mysqli_num_rows($result) > 0):
 			$count = 0;

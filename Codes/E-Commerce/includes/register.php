@@ -92,9 +92,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['registration'])):
 					  					DATE_ADD(NOW(), INTERVAL 1 MONTH))";
 			$result = mysqli_query($dbc, $query) or die("Insert Query Denied");
 			if(mysqli_affected_rows($dbc) == 1):
-				$message = true;
-				$body = "Thank you for registering with code break!";
-				mail("khan.photon@gmail.com", "Registration Confirmation", $body, "From:khan.photon@gmail.com");
+				 $message = true;
+				 $from = "khan.photon@gmail.com";
+			     $to = $e;
+			     $subject = "Registration Confirmation";
+			     $message = "Thank you for registering with code break";
+			     $headers = "From:" . $from;
+			 
+			    if(mail($to,$subject,$message, $headers)):
+			        echo "Email sent.";
+			    else: 
+			        echo "Failed to send the email.";
+			    endif; 
 			else:
 				trigger_error("You could not be registered due to a system error. We apologize for the inconvenience.");
 			endif;
@@ -166,6 +175,12 @@ if(isset($message)):
 					</div>
 				  	<div class='card-body'>
 				  		<p> Thank you for registering at <code>Code Break</code></p>
+						<form action='https://www.sandbox.paypal.com/cgi-bin/webscr' method='post' target='_top' class = 'mx-auto'>
+							<input type='hidden' name='cmd' value='_s-xclick'>
+							<input type='hidden' name='hosted_button_id' value='HXR2K5JUG864L'>
+							<input type='image' src='https://www.sandbox.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online!'>
+							<img alt='' border='0' src='https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'>
+						</form>
 				 	</div> 
 				</div>";
 	elseif($email_taken == true|| $user_taken == true):
