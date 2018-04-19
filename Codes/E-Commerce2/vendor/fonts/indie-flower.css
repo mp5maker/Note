@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Indie Flower';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/E-Commerce2/vendor/fonts/indie-flower/Indie-Flower-regular.eot');
+  src: url('/E-Commerce2/vendor/fonts/indie-flower/Indie-Flower-regular.eot?#iefix') format('embedded-opentype'),
+       local('Indie Flower'),
+       local('Indie-Flower-regular'),
+       url('/E-Commerce2/vendor/fonts/indie-flower/Indie-Flower-regular.woff2') format('woff2'),
+       url('/E-Commerce2/vendor/fonts/indie-flower/Indie-Flower-regular.woff') format('woff'),
+       url('/E-Commerce2/vendor/fonts/indie-flower/Indie-Flower-regular.ttf') format('truetype'),
+       url('/E-Commerce2/vendor/fonts/indie-flower/Indie-Flower-regular.svg#IndieFlower') format('svg');
+}
+

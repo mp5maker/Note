@@ -1,0 +1,28 @@
+RewriteEngine On
+
+RewriteRule ^/?$ index.php [NC,L]
+RewriteRule ^home/?$ home.php [NC,L]
+
+RewriteRule ^shop/([A-Za-z\+]+)/?$ shop.php?type=$1 [NC,L]
+RewriteRule ^browse/([A-Za-z\+]+)/([A-Za-z\+]+)/([0-9]+)?$ browse.php?type=$1&category=$2&id=$3 [NC,L]
+
+RewriteRule ^sales/?$ sales.php [NC,L]
+
+RewriteRule ^wishlist/?$ wishlist.php [NC,L]
+RewriteRule ^wishlist/([A-Za-z0-9\+]+)/([A-Za-z0-9\+]+)?$  wishlist.php?sku=$1&action=$2 [NC,L]
+RewriteRule ^wishlist/([A-Za-z0-9\+]+)/([A-Za-z0-9\+]+)/([0-9]+)?$  wishlist.php?sku=$1&action=$2&qty=$3 [NC,L]
+
+RewriteRule ^cart/?$  cart.php [NC,L]
+RewriteRule ^cart/([A-Za-z0-9\+]+)/([A-Za-z0-9\+]+)?$  cart.php?sku=$1&action=$2 [NC,L]
+RewriteRule ^cart/([A-Za-z0-9\+]+)/([A-Za-z0-9\+]+)/([0-9]+)?$  cart.php?sku=$1&action=$2&qty=$3 [NC,L]
+
+RewriteRule ^checkout/?$  checkout.php [NC,L]
+RewriteRule ^checkout/([A-Za-z0-9\+]+)?$  checkout.php?session=$1 [NC,L]
+
+RewriteRule ^billing/?$  billing.php [NC,L]
+RewriteRule ^final/?$  final.php [NC,L]
+
+RewriteRule ^mail/?$  mail.php [NC,L]
+RewriteRule ^map/?$  map.php [NC,L]
+
+

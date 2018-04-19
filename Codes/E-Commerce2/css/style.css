@@ -1,0 +1,13 @@
+html, body {height: 100% !important; margin: 0 !important; padding: 0 !important;}
+#map{width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important;}
+body{font-family: 'Indie Flower'; overflow-x: hidden !important; }
+#header-background{background-color: #541F19 !important;}
+.coffee-banner{box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19); transition: 0.5s;}
+.coffee-banner:hover{box-shadow: none;}
+.navigation-bgd{background-color: #A76C5E !important;}
+nav > div > ul> li > a:hover{opacity: 0.5 !important; transition: 0.5s !important;}
+nav > div > ul> li > a {transition: 0.5s;}
+h1{color: #541F19 !important;}
+.nounderline{text-decoration: none !important;}
+
+
