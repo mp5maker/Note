@@ -1,0 +1,5 @@
+html, body {height: 100% !important; margin: 0 !important; padding: 0 !important;}
+body{font-family: 'Ubuntu', sans-serif; overflow-x: hidden !important; }
+#map{width: 100% !important; height: 50% !important; margin: 0 !important; padding: 0 !important;}
+textarea{resize: none !important;}
+.nounderline{text-decoration: none !important;}

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/cafe/vendor/fonts/ubuntu/Ubuntu-regular.eot');
+  src: url('/cafe/vendor/fonts/ubuntu/Ubuntu-regular.eot?#iefix') format('embedded-opentype'),
+       local('Ubuntu'),
+       local('Ubuntu-regular'),
+       url('/cafe/vendor/fonts/ubuntu/Ubuntu-regular.woff2') format('woff2'),
+       url('/cafe/vendor/fonts/ubuntu/Ubuntu-regular.woff') format('woff'),
+       url('/cafe/vendor/fonts/ubuntu/Ubuntu-regular.ttf') format('truetype'),
+       url('/cafe/vendor/fonts/ubuntu/Ubuntu-regular.svg#Ubuntu') format('svg');
+}
+
