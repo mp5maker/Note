@@ -1,0 +1,9 @@
+Plugin Extensions
+
+Bootstrap 4, Font awesome 4, Font Awesome 5
+Djaineiro - Django Snippets
+Editor Zoom
+Python
+Sublime Text Keymap and Settings Importer
+
+
