@@ -5,5 +5,7 @@ Djaineiro - Django Snippets
 Editor Zoom
 Python
 Sublime Text Keymap and Settings Importer
+Sqlite
+
 
 
