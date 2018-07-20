@@ -33,6 +33,7 @@ npm install bootstrap
 npm install angular
 npm install angular-route
 npm i font-awesome
+npm install shepherd.js --save
 
 ::::::::::::::::::::::::::::::::::::::::
 
