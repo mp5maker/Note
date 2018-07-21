@@ -1,0 +1,88 @@
+Git
+Git: Clone
+Git: Create Branch
+Git: Checkout to
+
+::::::::::::::::::::::::::::::::::::::::
+
+Npm
+npm install -g sass
+npm install -g less
+npm install -g less-watch-compiler
+npm install -g @angular/cli
+
+lessc styles.less styles.css
+less-watch-compiler directory1  directory2
+
+
+sass styles.scss styles.css
+sass --watch input.scss output.css
+
+npm cache clean --forcecls
+npm install npm@latest -g
+npm install supervisor -g
+
+ng new my-app
+cd my-app
+ng serve --open
+ng generate component heroes
+
+npm install jquery@1.9.1
+npm install popper.js@1.14.3
+npm install bootstrap
+npm install angular
+npm install angular-route
+npm i font-awesome
+npm install shepherd.js --save
+
+::::::::::::::::::::::::::::::::::::::::
+
+Live Server
+localhost:80      PHP XAMPP Server
+localhost:8080    Node.js
+localhost:4200    AngularJS 2.0
+localhost:5500    Live Server VSCode
+localhost:7800    Python Server
+localhost:8000    Django Server
+localhost:8000    Laravel Server
+
+::::::::::::::::::::::::::::::::::::::::
+
+Django Installation
+python -m pip --version
+python -m pip install Django
+python -m django --version
+
+import os
+import sys
+os.path.dirname(sys.executable)
+
+django-admin startproject mysite
+django-admin startapp my_app
+pip install virtualenvwrapper-win
+
+mkvirtualenv django
+rmvirtualenv django
+pip install environ
+
+::::::::::::::::::::::::::::::::::::::::
+
+Django Essentials
+django-admin startproject mysite	::: Create a "mysite" project 
+manage.py runserver 			::: By Default to 8000
+manage.py runserver 8080  		::: To change the port
+manage.py startapp polls		::: Make an "polls" app
+manage.py migrate			::: Looks at the models and creates required datatables
+manage.py makemigrations polls		::: Django know about the changes in the models
+manage.py sqlmigrate poll		::: Transform the models into datatables 
+manage.py createsuperuser		::: Creates Superuser
+
+::::::::::::::::::::::::::::::::::::::::
+
+Laravel Essentials
+composer global require "laravel/installer"   ::: Global Installer Laravel
+php artisan list			      ::: All the commands lines for artisan
+php artisan help migrate		      ::: The keyword help describes all the commands after it
+php artisan migrate --env=local		      ::: Local configuration should be used
+php artisan serve			      ::: Laravel Default server (8000)
+php artisan serve --port=8080		      ::: Laravel Server at 8080 (change to)
