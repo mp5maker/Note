@@ -44,6 +44,7 @@ localhost:4200    AngularJS 2.0
 localhost:5500    Live Server VSCode
 localhost:7800    Python Server
 localhost:8000    Django Server
+localhost:8000    Laravel Server
 
 ::::::::::::::::::::::::::::::::::::::::
 
@@ -74,4 +75,14 @@ manage.py startapp polls		::: Make an "polls" app
 manage.py migrate			::: Looks at the models and creates required datatables
 manage.py makemigrations polls		::: Django know about the changes in the models
 manage.py sqlmigrate poll		::: Transform the models into datatables 
-manage.py createsuperuser		::: Creates Superuser
+manage.py createsuperuser		::: Creates Superusermanage.py createsuperuser		::: Creates Superuser
+
+::::::::::::::::::::::::::::::::::::::::
+
+Laravel Essentials
+composer global require "laravel/installer"   ::: Global Installer Laravel
+php artisan list			      ::: All the commands lines for artisan
+php artisan help migrate		      ::: The keyword help describes all the commands after it
+php artisan migrate --env=local		      ::: Local configuration should be used
+php artisan serve			      ::: Laravel Default server (8000)
+php artisan serve --port=8080		      ::: Laravel Server at 8080 (change to)
