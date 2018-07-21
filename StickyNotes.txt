@@ -40,6 +40,7 @@ ng generate component heroes
 
 Typescript
 tsc helloworld.ts
+tsc helloworld.ts --watch
 
 ::::::::::::::::::::::::::::::::::::::::
 
