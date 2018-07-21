@@ -5,35 +5,38 @@ Git: Checkout to
 
 ::::::::::::::::::::::::::::::::::::::::
 
-Npm
+Install
 npm install -g sass
 npm install -g less
 npm install -g less-watch-compiler
 npm install -g @angular/cli
-
-lessc styles.less styles.css
-less-watch-compiler directory1  directory2
-
-
-sass styles.scss styles.css
-sass --watch input.scss output.css
-
-npm cache clean --forcecls
-npm install npm@latest -g
-npm install supervisor -g
-
-ng new my-app
-cd my-app
-ng serve --open
-ng generate component heroes
-
+npm install -g typescript
 npm install jquery@1.9.1
 npm install popper.js@1.14.3
 npm install bootstrap
 npm install angular
 npm install angular-route
-npm i font-awesome
+npm install i font-awesome
 npm install shepherd.js --save
+
+Less
+lessc styles.less styles.css
+less-watch-compiler directory1  directory2
+
+Sass
+sass styles.scss styles.css
+sass --watch input.scss output.css
+
+Npm Utilities
+npm cache clean --forcecls
+npm install npm@latest -g
+npm install supervisor -g
+
+Angular JS 2.0
+ng new my-app
+cd my-app
+ng serve --open
+ng generate component heroes
 
 ::::::::::::::::::::::::::::::::::::::::
 
