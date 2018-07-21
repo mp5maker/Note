@@ -75,7 +75,7 @@ manage.py startapp polls		::: Make an "polls" app
 manage.py migrate			::: Looks at the models and creates required datatables
 manage.py makemigrations polls		::: Django know about the changes in the models
 manage.py sqlmigrate poll		::: Transform the models into datatables 
-manage.py createsuperuser		::: Creates Superusermanage.py createsuperuser		::: Creates Superuser
+manage.py createsuperuser		::: Creates Superusermanage.py createsuperuser		
 
 ::::::::::::::::::::::::::::::::::::::::
 
