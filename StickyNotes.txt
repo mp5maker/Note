@@ -93,3 +93,10 @@ php artisan help migrate		      ::: The keyword help describes all the commands 
 php artisan migrate --env=local		      ::: Local configuration should be used
 php artisan serve			      ::: Laravel Default server (8000)
 php artisan serve --port=8080		      ::: Laravel Server at 8080 (change to)
+php artisan make:controller ArticleController --resource            :: Make Controller
+php artisan make:migration create_users_table --create=”users”	    :: Make Miga
+php artisan migrate						    :: Migrate
+php artisan migrate --pretend					    :: Pretend Migrate
+php artisan migrate:rollback 					    :: Migrate Rollback
+php artisan migrate:refresh					    :: Migrate Refresh
+php artisan list						    :: Migrate Lists
