@@ -99,4 +99,5 @@ php artisan migrate						    :: Migrate
 php artisan migrate --pretend					    :: Pretend Migrate
 php artisan migrate:rollback 					    :: Migrate Rollback
 php artisan migrate:refresh					    :: Migrate Refresh
-php artisan list						    :: Migrate Lists
+php artisan make:model Game					    :: Create Model
+php artisan list						    :: Lists the artisan commands
