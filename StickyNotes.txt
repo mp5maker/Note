@@ -87,17 +87,17 @@ manage.py createsuperuser		::: Creates Superuser
 ::::::::::::::::::::::::::::::::::::::::
 
 Laravel Essentials
-composer global require "laravel/installer"   ::: Global Installer Laravel
-php artisan list			      ::: All the commands lines for artisan
-php artisan help migrate		      ::: The keyword help describes all the commands after it
-php artisan migrate --env=local		      ::: Local configuration should be used
-php artisan serve			      ::: Laravel Default server (8000)
-php artisan serve --port=8080		      ::: Laravel Server at 8080 (change to)
-php artisan make:controller ArticleController --resource            :: Make Controller
-php artisan make:migration create_users_table --create=”users”	    :: Make Miga
-php artisan migrate						    :: Migrate
-php artisan migrate --pretend					    :: Pretend Migrate
-php artisan migrate:rollback 					    :: Migrate Rollback
-php artisan migrate:refresh					    :: Migrate Refresh
-php artisan make:model Game					    :: Create Model
-php artisan list						    :: Lists the artisan commands
+composer global require "laravel/installer"  
+php artisan serve --port=8080
+php artisan make:controller ArticleController --resource
+php artisan make:migration create_users_table --create=”users”
+php artisan migrate
+php artisan migrate --pretend
+php artisan migrate:rollback 
+php artisan migrate:refresh
+php artisan make:model Game
+php artisan make:event ActionDone
+php artisan make:listener ThingsToDoAfterEventWasFired --event="ActionDone"
+php artisan event:generate  (Shortcut when mentions in Providers)
+php artisan make:middleware MyMiddleware
+php artisan list
