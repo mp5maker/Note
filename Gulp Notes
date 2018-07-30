@@ -1,0 +1,31 @@
+Gulp JS Crash Course
+It is not a framework or library
+Tool for making JavaScript
+It is installed with NPM
+It is used for time consuming & repetitive tasks
+
+Minification of scripts and styles > removes all the whitespaces
+Concatenate many files into a one big file > optimizes the app
+Cache > Let the browser if there is any change
+Development Server
+
+How Gulp Works
+> Build on node streams
+> Continuous flow of data that can be manipulated asynchronously
+> Multiple tasks can be done using the pipe operator
+
+Starting the Project
+> npm init
+> npm install --save-dev gulp
+
+Folder Structure
+Gulp
+	>node_modules → All the gulp files
+	>src 
+	gulpfile.js
+	package.json
+npm install --save-dev gulp-imagemin
+npm install --save-dev gulp-uglify
+npm install --save-dev gulp-sass
+npm install –save-dev gulp-concat
+npm install –save-dev gulp-watch
