@@ -1,0 +1,121 @@
+Gulp JS Crash Course
+It is not a framework or library
+Tool for making JavaScript
+It is installed with NPM
+It is used for time consuming & repetitive tasks
+
+Minification of scripts and styles > removes all the whitespaces
+Concatenate many files into a one big file > optimizes the app
+Cache > Let the browser if there is any change
+Development Server
+
+How Gulp Works
+> Build on node streams
+> Continuous flow of data that can be manipulated asynchronously
+> Multiple tasks can be done using the pipe operator
+
+Starting the Project
+> npm init
+> npm install --save-dev gulp
+
+Folder Structure
+Gulp
+	>node_modules → All the gulp files
+	>src 
+	gulpfile.js
+	package.json
+npm install --save-dev gulp-imagemin
+npm install --save-dev gulp-uglify
+npm install --save-dev gulp-sass
+npm install –save-dev gulp-concat
+npm install –save-dev gulp-watch
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Github
+Version Control System for tracking changes in computer files
+Distributed version control
+Coordinates work between multiple developers
+
+Keeps track of code history using snapshots of the files
+Stage the files before committing
+
+Basic Commands
+git init
+Initializes the repository
+
+git add
+Adds the file for staging area
+
+git status
+Displays the differences between the working directory or staging area
+
+git commit
+Commit changes 
+
+git push
+Push the commit changes
+
+git pull
+Pulls the latest repository
+
+git clone
+Copies the remote repository
+
+git config --global user.name ‘Shabuktagin Photon Khan’
+Configuration for username
+
+git config --global user.email ‘khan.photon@gmail.com’
+Configuration for email
+
+git add [file-name]
+This adds the file in the staging area
+git add index.html
+git add *.html
+git add *.js
+git add .
+
+git status
+This gives the details about the files that are in staging area
+
+git rm --cached [file-name]
+Removes the file from the staging area
+
+git commit
+This will commit the files and take us to the vim editor
+
+
+git commit -m “your-message”
+This will add message to the committing
+
+create a file named .gitignore
+log.txt
+/dir2
+
+git branch 
+Gives the list of all the branches
+
+git branch [branch-name]
+Create a branch name
+
+git checkout [branch-name]
+Checks out in that branch-name
+
+Example
+git branch login
+touch extra.txt
+git add .
+git commit -m ‘Extra login file’
+git checkout master
+
+git merge [branch-name] -m ‘Merged Branch’
+Merges the branch-name with message
+
+git remote add [short-name] [url-name]
+Adds the short-name of the remote url
+
+git push -u [short-name] [branch-name]
+Pushes the committed file to the remote destination of the designated branch
+
+git pull
+Pulls the repository to stay update
+
